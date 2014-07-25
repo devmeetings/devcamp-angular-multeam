@@ -12,8 +12,31 @@
     <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
     <script type="text/javascript" src="<%= file %>"></script><% }); %>
 
+    <style type="text/css" media="screen">
+      #editor {
+          margin: 0;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+      }
+
+      body {
+        overflow: hidden;
+      }
+    </style>
+
   </head>
   <body>
-    
+<pre id="editor">function() {
+  return "Hello world!";
+}
+</pre>
+    <script>
+        var editor = ace.edit("editor");
+        editor.setTheme("ace/theme/twilight");
+        editor.getSession().setMode("ace/mode/javascript");
+    </script>
   </body>
 </html>
