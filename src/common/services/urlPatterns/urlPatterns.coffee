@@ -5,8 +5,7 @@ devcampMulteamServices.constant('urlPatterns', {
     
   }
   fe: {
-    home: 'home'
+    home: ''
     _404: '404'
-    
   }
 })

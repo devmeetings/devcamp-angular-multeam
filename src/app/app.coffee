@@ -15,6 +15,9 @@ devcampMulteam = angular.module( 'devcamp-angular-multeam', [
   'devcamp-angular-multeam.404'
   
   # Vendor modules
+  'templates-app'
+  'templates-common'
+  'ui.router'
 ])
 .config([
   '$locationProvider'
