@@ -25,6 +25,11 @@ angular.module( 'devcamp-angular-multeam.home', [
     editor.setTheme("ace/theme/twilight")
     editor.getSession().setMode("ace/mode/javascript")
 
-    sharejs.open 'hello', 'text', 'http://editor.dev:8000', (error, doc) ->
-      doc.attach_ace(editor)
+    sharejs.open(
+      'hello'
+      'text'
+      'http://localhost:8000/channel'
+      (error, doc) ->
+        doc.attach_ace(editor)
+    )
 ])
