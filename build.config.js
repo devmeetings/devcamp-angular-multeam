@@ -67,7 +67,13 @@ module.exports = {
       'vendor/placeholders/angular-placeholders-0.0.1-SNAPSHOT.min.js',
       'vendor/angular-ui-router/release/angular-ui-router.js',
       'vendor/angular-ui-utils/modules/route/route.js',
-      'vendor/ace-builds/src-noconflict/ace.js'
+      'vendor/ace-builds/src-noconflict/ace.js',
+      'vendor/ace-builds/src-noconflict/theme-twilight.js',
+      'vendor/ace-builds/src-noconflict/mode-javascript.js',
+      'vendor/ace-builds/src-noconflict/worker-javascript.js',
+      'node_modules/share/node_modules/browserchannel/dist/bcsocket.js',
+      'node_modules/share/webclient/share.js',
+      'node_modules/share/webclient/ace.js',
     ],
     css: [
     ],

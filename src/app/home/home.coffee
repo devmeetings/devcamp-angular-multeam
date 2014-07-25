@@ -24,4 +24,7 @@ angular.module( 'devcamp-angular-multeam.home', [
     editor = ace.edit("editor")
     editor.setTheme("ace/theme/twilight")
     editor.getSession().setMode("ace/mode/javascript")
+
+    sharejs.open 'hello', 'text', 'http://editor.dev:8000', (error, doc) ->
+      doc.attach_ace(editor)
 ])
