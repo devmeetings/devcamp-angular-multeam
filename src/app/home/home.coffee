@@ -28,7 +28,7 @@ angular.module( 'devcamp-angular-multeam.home', [
     sharejs.open(
       'hello'
       'text'
-      'http://localhost:8000/channel'
+      'http://multeam-server.herokuapp.com/channel'
       (error, doc) ->
         doc.attach_ace(editor)
     )
