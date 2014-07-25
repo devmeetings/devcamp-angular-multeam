@@ -1,0 +1,13 @@
+{
+  "generator-investio-angularJs": {
+    "projectName": "devcamp-angular-multeam",
+    "projectModuleName": "devcamp-angular-multeam",
+    "projectVarName": "devcampMulteam",
+    "filtersModuleName": "devcamp-multeam-filters",
+    "filtersVarName": "devcampMulteamFilters",
+    "directivesModuleName": "devcamp-multeam-directives",
+    "directivesVarName": "devcampMulteamDirectives",
+    "servicesModuleName": "devcamp-multeam-services",
+    "servicesVarName": "devcampMulteamServices"
+  }
+}
