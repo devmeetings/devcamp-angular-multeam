@@ -11,6 +11,7 @@ devcampMulteam = angular.module( 'devcamp-angular-multeam', [
   'devcamp-multeam-services'
   
   # App modules
+  'devcamp-angular-multeam.firebase'
   'devcamp-angular-multeam.home'
   'devcamp-angular-multeam.404'
   

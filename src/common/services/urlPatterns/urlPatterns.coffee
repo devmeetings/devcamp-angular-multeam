@@ -5,6 +5,7 @@ devcampMulteamServices.constant('urlPatterns', {
     
   }
   fe: {
+    firebase: 'firebase'
     home: ''
     _404: '404'
   }
