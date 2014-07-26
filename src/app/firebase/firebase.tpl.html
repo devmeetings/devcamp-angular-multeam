@@ -1,8 +1,8 @@
 <div class="investio-module-devcamp-angular-multeam-firebase container">
 	<div class="row">
-		<div class="col-md-8 col-md-offset-2" ng-repeat="document in documents track by $index">
+		<div class="col-md-8 col-md-offset-2" ng-repeat="(key, document) in documents">
 			{{ document.id }}: {{ document.name }}
-			<button class="btn btn-danger" ng-click="remove(document)">usun</button>
+			<button class="btn btn-danger" ng-click="remove(key)">usun</button>
 		</div>
 	</div>
 	<div class="row">

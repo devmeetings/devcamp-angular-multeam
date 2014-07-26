@@ -20,6 +20,7 @@ devcampMulteam = angular.module( 'devcamp-angular-multeam', [
   'templates-common'
   'ui.router'
   'uuid'
+  'firebase'
 ])
 .config([
   '$locationProvider'
