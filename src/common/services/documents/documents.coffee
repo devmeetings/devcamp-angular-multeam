@@ -2,10 +2,11 @@
 
 devcampMulteamServices.factory('documents', [
   '$rootScope'
+  '$firebase'
   'config'
   'uuid4'
   'saveApply'
-  ($rootScope, config, uuid4, saveApply) ->
+  ($rootScope, $firebase, config, uuid4, saveApply) ->
     documents = []
     firebase = new Firebase(config.get('firebaseDocumentsUrl'))
     

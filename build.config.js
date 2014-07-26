@@ -75,7 +75,9 @@ module.exports = {
       'node_modules/share/webclient/share.js',
       'node_modules/share/webclient/ace.js',
       'vendor/angular-uuid/uuid.min.js',
-      'vendor/underscore/underscore.js'
+      'vendor/underscore/underscore.js',
+      'vendor/firebase/firebase.js',
+      'vendor/angularfire/angularfire.js'
     ],
     css: [
     ],
