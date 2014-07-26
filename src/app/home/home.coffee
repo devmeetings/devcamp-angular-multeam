@@ -12,24 +12,46 @@ angular.module( 'devcamp-angular-multeam.home', [
   'urlProvider'
   ($stateProvider, urlProvider) ->
     $stateProvider
-      .state('home', {
+    .state('home', {
         url: urlProvider.$get().getUrl('fe.home')
         controller: 'HomeCtrl'
         templateUrl: 'home/home.tpl.html'
       })
+    .state('home.create', {
+        url: urlProvider.$get().getUrl('fe.create')
+        controller: 'CreateCtrl'
+      })
+    .state('home.edit', {
+        url: urlProvider.$get().getUrl('fe.edit')
+        controller: 'EditCtrl'
+      })
+    .state('home.delete', {
+        url: urlProvider.$get().getUrl('fe.delete')
+        controller: 'DeleteCtrl'
+      })
 ])
 .controller( 'HomeCtrl', [
-  '$scope'
-  ($scope) ->
-    editor = ace.edit("editor")
-    editor.setTheme("ace/theme/twilight")
-    editor.getSession().setMode("ace/mode/javascript")
+    '$scope'
+    ($scope) ->
+      $scope.documents = for num in [1..10]
+        name: "document no. #{num}"
+        editors: ["a", "b", "c", "d"].slice(num % 3)
+        author: "author #{num}"
+        id: "#{num}"
 
-    sharejs.open(
-      'hello'
-      'text'
-      'http://multeam-server.herokuapp.com/channel'
-      (error, doc) ->
-        doc.attach_ace(editor)
-    )
+])
+.controller( 'CreateCtrl', [
+    '$scope'
+    ($scope) ->
+
+])
+.controller( 'EditCtrl', [
+    '$scope'
+    ($scope) ->
+
+])
+.controller( 'DeleteCtrl', [
+    '$scope'
+    ($scope) ->
+
 ])

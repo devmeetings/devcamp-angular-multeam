@@ -6,6 +6,9 @@ devcampMulteamServices.constant('urlPatterns', {
   }
   fe: {
     home: ''
+    create: 'create/:id'
+    edit: 'edit/:id'
+    delete: 'delete/:id'
     _404: '404'
   }
 })

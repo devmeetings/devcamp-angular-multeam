@@ -1,14 +1,39 @@
 .investio-module-devcamp-angular-multeam-home{
-  #editor {
-    margin: 0;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
+  &:extend(.container-fluid);
+  max-width: 600px;
 
-  body {
-    overflow: hidden;
+  .document-list {
+    &:extend(.list-group);
+
+    .item {
+      &:extend(.list-group-item);
+      &:extend(.row);
+      header {
+        .h3 {
+          .make-md-column(8);
+        }
+        .control-buttons {
+          .make-md-column(4);
+
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+
+.control-buttons {
+  &:extend(.btn-group);
+
+  > button {
+    &:extend(.btn);
+
+    &:not(.delete){
+      &:extend(.btn-default);
+    }
+
+    &.delete {
+      &:extend(.btn-danger);
+    }
   }
 }
