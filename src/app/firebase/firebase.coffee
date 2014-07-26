@@ -27,6 +27,6 @@ angular.module( 'devcamp-angular-multeam.firebase', [
     $scope.create = () ->
       documents.create($scope.name)
     
-    $scope.remove = (id) ->
-      documents.remove(id)
+    $scope.remove = (doc) ->
+      documents.remove(doc)
 ])

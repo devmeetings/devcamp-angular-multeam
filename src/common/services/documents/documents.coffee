@@ -7,7 +7,7 @@ devcampMulteamServices.factory('documents', [
   'saveApply'
   ($rootScope, config, uuid4, saveApply) ->
     documents = []
-    firebase = new Firebase(config.get('firebaseUrl'))
+    firebase = new Firebase(config.get('firebaseDocumentsUrl'))
     
     getNewDocument = (name) ->
       if not name
@@ -21,25 +21,27 @@ devcampMulteamServices.factory('documents', [
       }
     
     getFirebaseDocument = (id) ->
-      return new Firebase(config.get('firebaseUrl') + id)
+      return new Firebase(config.get('firebaseDocumentsUrl') + id)
     
     create = (name) ->
-      document = getNewDocument(name)
-      getFirebaseDocument(document.id).set(document)
+      doc = getNewDocument(name)
+      getFirebaseDocument(doc.id).set(doc)
       
-    remove = (document) ->
-      getFirebaseDocument(document.id).remove(() ->
-        saveApply.saveApply(() ->
-          documents.splice(documents.indexOf(document), 1)
-        )
-      )
+    remove = (doc) ->
+      getFirebaseDocument(doc.id).remove()
     
     get = () ->
       documents
     
-    firebase.on('child_added', (document) ->
+    firebase.on('child_added', (doc) ->
       saveApply.saveApply(() ->
-        documents.push(document.val())
+        documents.push(doc.val())
+      )
+    )
+    
+    firebase.on('child_removed', (doc) ->
+      saveApply.saveApply(() ->
+        documents.splice(documents.indexOf(doc), 1)
       )
     )
     
