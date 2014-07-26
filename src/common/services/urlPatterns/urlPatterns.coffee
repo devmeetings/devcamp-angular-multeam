@@ -5,6 +5,7 @@ devcampMulteamServices.constant('urlPatterns', {
     
   }
   fe: {
+    firebase: 'firebase'
     home: ''
     create: 'create/:id'
     edit: 'edit/:id'

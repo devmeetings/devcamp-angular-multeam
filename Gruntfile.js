@@ -304,6 +304,11 @@ module.exports = function ( grunt ) {
         files: {
           src: [ '<%= app_files.coffeeunit %>' ]
         }
+      },
+      options: {
+        max_line_length: {
+          level: 'ignore'
+        }
       }
     },
 

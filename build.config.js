@@ -74,6 +74,8 @@ module.exports = {
       'node_modules/share/node_modules/browserchannel/dist/bcsocket.js',
       'node_modules/share/webclient/share.js',
       'node_modules/share/webclient/ace.js',
+      'vendor/angular-uuid/uuid.min.js',
+      'vendor/underscore/underscore.js'
     ],
     css: [
     ],
