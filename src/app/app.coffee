@@ -29,7 +29,7 @@ devcampMulteam = angular.module( 'devcamp-angular-multeam', [
     $urlRouterProvider.when('', '/')
     $urlRouterProvider.otherwise(urlProvider.$get().getUrl('fe._404'))
 
-    $locationProvider.html5Mode(true)
+    #$locationProvider.html5Mode(true)
 ])
 .run([
   () ->

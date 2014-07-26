@@ -6,10 +6,8 @@ devcampMulteamServices.constant('urlPatterns', {
   }
   fe: {
     firebase: 'firebase'
-    home: ''
-    create: 'create/:id'
-    edit: 'edit/:id'
-    delete: 'delete/:id'
+    home: 'home'
+    homeEdit: ':id'
     _404: '404'
   }
 })

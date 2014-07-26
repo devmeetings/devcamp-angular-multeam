@@ -1,15 +1,10 @@
-<li class="{{class}}">
-    <header>
-        <h3>{{item.name}}</h3>
-        <aside class="control-buttons">
-            <button type="button" class="edit">Edit</button>
-            <button type="button" class="delete">Delete</button>
-        </aside>
-    </header>
+<li class="{{class}}" ng-click="edit(item.id)">
+    <button class="delete" ng-click="delete($event, key)">x</button>
+    <h3>{{ item.name }}</h3>
     <dl>
         <dt>Author:</dt>
-        <dd>{{item.author}}</dd>
-        <dt>Current editors:</dt>
-        <dd>{{item.editors.join(', ')}}</dd>
+        <dd>{{ item.author.name }}</dd>
+        <dt>Editors:</dt>
+        <dd>{{ item.editors.join(',') }}</dd>
     </dl>
 </li>

@@ -17,41 +17,36 @@ angular.module( 'devcamp-angular-multeam.home', [
         controller: 'HomeCtrl'
         templateUrl: 'home/home.tpl.html'
       })
-    .state('home.create', {
-        url: urlProvider.$get().getUrl('fe.create')
-        controller: 'CreateCtrl'
-      })
     .state('home.edit', {
-        url: urlProvider.$get().getUrl('fe.edit')
-        controller: 'EditCtrl'
-      })
-    .state('home.delete', {
-        url: urlProvider.$get().getUrl('fe.delete')
-        controller: 'DeleteCtrl'
+        url: urlProvider.$get().getUrl('fe.homeEdit')
+        controller: 'HomeEditCtrl'
+        templateUrl: 'home/home.edit.tpl.html'
       })
 ])
 .controller( 'HomeCtrl', [
     '$scope'
-    ($scope) ->
-      $scope.documents = for num in [1..10]
-        name: "document no. #{num}"
-        editors: ["a", "b", "c", "d"].slice(num % 3)
-        author: "author #{num}"
-        id: "#{num}"
+    '$state'
+    'documents'
+    ($scope, $state, documents) ->
+      console.log 'HomeCtrl',$state.current
+#      $scope.documents = for num in [1..10]
+#        name: "document no. #{num}"
+#        editors: ["a", "b", "c", "d"].slice(num % 3)
+#        author: "author #{num}"
+#        id: "#{num}"
+
+      $scope.documents = documents.get()
+#
+#      $scope.create = () ->
+#        documents.create($scope.name)
+#
+#      $scope.remove = (doc) ->
+#        documents.remove(doc)
 
 ])
-.controller( 'CreateCtrl', [
-    '$scope'
-    ($scope) ->
-
-])
-.controller( 'EditCtrl', [
-    '$scope'
-    ($scope) ->
-
-])
-.controller( 'DeleteCtrl', [
-    '$scope'
-    ($scope) ->
-
+.controller( 'HomeEditCtrl', [
+  '$scope'
+  '$stateParams'
+  ($scope, $stateParams) ->
+    $scope.docId = $stateParams.id
 ])
