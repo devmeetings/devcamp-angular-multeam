@@ -20,9 +20,6 @@ devcampMulteamServices.factory('documents', [
         author: ''
       }
     
-    getFirebaseDocument = (id) ->
-      return new Firebase(config.get('firebaseDocumentsUrl') + id)
-    
     create = (name) ->
       documents.$add(getNewDocument(name))
       

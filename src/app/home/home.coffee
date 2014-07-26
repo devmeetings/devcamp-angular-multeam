@@ -25,28 +25,16 @@ angular.module( 'devcamp-angular-multeam.home', [
 ])
 .controller( 'HomeCtrl', [
     '$scope'
-    '$state'
     'documents'
-    ($scope, $state, documents) ->
-      console.log 'HomeCtrl',$state.current
-#      $scope.documents = for num in [1..10]
-#        name: "document no. #{num}"
-#        editors: ["a", "b", "c", "d"].slice(num % 3)
-#        author: "author #{num}"
-#        id: "#{num}"
-
+    ($scope, documents) ->
       $scope.documents = documents.get()
-#
-#      $scope.create = () ->
-#        documents.create($scope.name)
-#
-#      $scope.remove = (doc) ->
-#        documents.remove(doc)
-
 ])
 .controller( 'HomeEditCtrl', [
   '$scope'
+  '$state'
   '$stateParams'
-  ($scope, $stateParams) ->
+  ($scope, $state, $stateParams) ->
+    if not $stateParams.id
+      $state.go('home')
     $scope.docId = $stateParams.id
 ])
