@@ -9,6 +9,8 @@
     "angular-ui-router": "~0.2"
   },
   "dependencies": {
-    "ace-builds": "~1.1.5"
+    "ace-builds": "~1.1.5",
+    "angular-uuid": "~0.1.0",
+    "underscore": "~1.6.0"
   }
 }

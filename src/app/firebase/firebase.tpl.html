@@ -1,14 +1,14 @@
 <div class="investio-module-devcamp-angular-multeam-firebase container">
 	<div class="row">
-		<div class="col-md-8 col-md-offset-2" ng-repeat="msg in msgs track by $index">
-			{{ msg.name }}: {{ msg.text }}
+		<div class="col-md-8 col-md-offset-2" ng-repeat="document in documents track by $index">
+			{{ document.id }}: {{ document.name }}
+			<button class="btn btn-danger" ng-click="remove(document)">usun</button>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
 			<input type="text" ng-model="name" class="form-control">
-			<input type="text" ng-model="text" class="form-control">
-			<button ng-click="publish()" class="btn btn-primary">Publikuj</button>
+			<button ng-click="create()" class="btn btn-primary">Publikuj</button>
 		</div>
 	</div>
 </div>

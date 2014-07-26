@@ -20,16 +20,13 @@ angular.module( 'devcamp-angular-multeam.firebase', [
 ])
 .controller( 'FirebaseCtrl', [
   '$scope'
-  ($scope) ->
-    myDataRef = new Firebase('https://ptow2e1wikl.firebaseio-demo.com/')
+  'documents'
+  ($scope, documents) ->
+    $scope.documents = documents.get()
     
-    $scope.msgs = []
+    $scope.create = () ->
+      documents.create($scope.name)
     
-    $scope.publish = () ->
-      myDataRef.push({name: $scope.name, text: $scope.text})
-      
-    myDataRef.on('child_added', (snapshot) ->
-      message = snapshot.val()
-      $scope.msgs.push(message)
-    )
+    $scope.remove = (id) ->
+      documents.remove(id)
 ])

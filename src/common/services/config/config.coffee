@@ -3,7 +3,7 @@
 devcampMulteamServices.provider('config', [
   () ->
     appSettings =
-      dummyCnf: ''
+      firebaseUrl: 'https://ptow2e1wikl.firebaseio-demo.com/documents_test/'
   
     get = (configName) ->
       if typeof appSettings[configName] is 'undefined'
