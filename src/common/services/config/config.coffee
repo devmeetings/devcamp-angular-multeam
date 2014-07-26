@@ -3,7 +3,8 @@
 devcampMulteamServices.provider('config', [
   () ->
     appSettings =
-      firebaseUrl: 'https://ptow2e1wikl.firebaseio-demo.com/documents_test/'
+      firebaseUrl: 'https://sizzling-fire-8674.firebaseio.com/'
+      firebaseDocumentsUrl: 'https://sizzling-fire-8674.firebaseio.com/documents/'
   
     get = (configName) ->
       if typeof appSettings[configName] is 'undefined'
