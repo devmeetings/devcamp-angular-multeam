@@ -1,0 +1,13 @@
+{
+  "name": "generator-investio-angularJs",
+  "version": "0.1.0",
+  "description": "Investio Yeoman generator for AngularJ",
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "~0.17.0",
+    "touch": "0.0.3",
+    "path": "~0.4.9"
+  }
+}
